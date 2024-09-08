@@ -1,4 +1,4 @@
-def tostring(li): #리스트를 문자열로 변환(글자 사이 공백 추가)
+def to_string(li): #리스트를 문자열로 변환(글자 사이 공백 추가)
     answer = ''
     for i in li:
         answer = answer + str(i) + ' '
@@ -17,13 +17,13 @@ def quicksort(li):
         else:
             right.append(element)
     
-    strleft = tostring(left)
-    strright = tostring(right)
+    strleft = to_string(left)
+    strright = to_string(right)
     print('\033[93m' + strleft, '\033[96m' + "/" + str(pivot) + "/" , '\033[91m' + strright)
     result = quicksort(left) + [pivot] + quicksort(right)
     return result
     
 Input = [3, 8, 5, 6, 9, 1 ,4, 2, 7]
 Output = quicksort(Input)
-stringOutput = tostring(Output)
+stringOutput = to_string(Output)
 print('\033[37m' + stringOutput)
